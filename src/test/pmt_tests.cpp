@@ -1,15 +1,15 @@
-// Copyright (c) 2012-2016 The Bitcoin Core developers
+// Copyright (c) 2012-2019 TurboCoin
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "consensus/merkle.h"
-#include "merkleblock.h"
-#include "serialize.h"
-#include "streams.h"
-#include "uint256.h"
-#include "arith_uint256.h"
-#include "version.h"
-#include "test/test_bitcoin.h"
+#include <consensus/merkle.h>
+#include <merkleblock.h>
+#include <serialize.h>
+#include <streams.h>
+#include <uint256.h>
+#include <arith_uint256.h>
+#include <version.h>
+#include <test/setup_common.h>
 
 #include <vector>
 

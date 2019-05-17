@@ -1,13 +1,14 @@
 *.tar.gz
 
 *.exe
-src/bitcoin
-src/bitcoind
-src/bitcoin-cli
-src/bitcoin-tx
-src/test/test_bitcoin
-src/test/test_bitcoin_fuzzy
-src/qt/test/test_bitcoin-qt
+src/turbocoin
+src/turbocoind
+src/turbocoin-cli
+src/turbocoin-tx
+src/turbocoin-wallet
+src/test/test_turbocoin
+src/test/test_turbocoin_fuzzy
+src/qt/test/test_turbocoin-qt
 
 # autoreconf
 Makefile.in
@@ -30,8 +31,8 @@ config.log
 config.status
 configure
 libtool
-src/config/bitcoin-config.h
-src/config/bitcoin-config.h.in
+src/config/turbocoin-config.h
+src/config/turbocoin-config.h.in
 src/config/stamp-h1
 share/setup.nsi
 share/qt/Info.plist
@@ -44,6 +45,12 @@ src/qt/forms/ui_*.h
 
 src/qt/test/moc*.cpp
 
+src/qt/turbocoin-qt.config
+src/qt/turbocoin-qt.creator
+src/qt/turbocoin-qt.creator.user
+src/qt/turbocoin-qt.files
+src/qt/turbocoin-qt.includes
+
 .deps
 .dirstamp
 .libs
@@ -55,10 +62,10 @@ src/qt/test/moc*.cpp
 *.pyc
 *.o
 *.o-*
-*.patch
 *.a
 *.pb.cc
 *.pb.h
+*.dat
 
 *.log
 *.trs
@@ -67,6 +74,10 @@ src/qt/test/moc*.cpp
 *.json.h
 *.raw.h
 
+# Only ignore unexpected patches
+*.patch
+!depends/patches/*.patch
+
 #libtool object files
 *.lo
 *.la
@@ -74,12 +85,13 @@ src/qt/test/moc*.cpp
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-bitcoin-qt
-Bitcoin-Qt.app
+turbocoin-qt
+Turbocoin-Qt.app
+background.tiff*
 
 # Unit-tests
 Makefile.test
-bitcoin-qt_test
+turbocoin-qt_test
 
 # Resources cpp
 qrc_*.cpp
@@ -92,7 +104,7 @@ build
 *.gcno
 *.gcda
 /*.info
-test_bitcoin.coverage/
+test_turbocoin.coverage/
 total.coverage/
 coverage_percent.txt
 
@@ -107,5 +119,11 @@ test/cache/*
 
 /doc/doxygen/
 
-libbitcoinconsensus.pc
+libturbocoinconsensus.pc
 contrib/devtools/split-debug.sh
+
+# Output from running db4 installation
+db4/
+
+# clang-check
+*.plist

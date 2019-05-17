@@ -1,0 +1,33 @@
+# /etc/conf.d/turbocoind: config file for /etc/init.d/turbocoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/turbocoin/turbocoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/turbocoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/turbocoind.pid"
+
+# Where to write turbocoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/turbocoind"
+
+# User and group to own turbocoind process
+#BITCOIND_USER="turbocoin"
+#BITCOIND_GROUP="turbocoin"
+
+# Path to turbocoind executable
+#BITCOIND_BIN="/usr/bin/turbocoind"
+
+# Nice value to run turbocoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#BITCOIND_OPTS=""
+
+# The timeout in seconds OpenRC will wait for turbocoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+BITCOIND_SIGTERM_TIMEOUT=60
